@@ -1,31 +1,29 @@
-
 import { LayoutProps } from '@models/index';
 
 import * as React from 'react';
-import Link from 'next/link'
+import Link from 'next/link';
 import { Stack } from '@mui/material';
 import { Box } from '@mui/system';
 import Menu from '@components/common/menu/menu';
-import Navbar from '@components/common/nav';
+import Header from '@components/common/header/header';
 
-
-
-export function MainLayout ({children}:  LayoutProps) {
+export function MainLayout({ children }: LayoutProps) {
   return (
-    <Stack 
-      minHeight="100vh" 
-      direction="row" 
-      spacing={3} 
+    <Stack
+      minHeight="100vh"
+      direction="row"
+      spacing={5}
       justifyContent="flex-start"
       bgcolor="primary.main"
     >
-      <Menu />
+      <Box>
+        <Menu />
+      </Box>
       <Box component="main">
-          <Navbar />
+        <Header />
 
-          <Box>{children}</Box>
-			</Box>
-
+        <Box sx={{ml: "242px"}}>{children}</Box>
+      </Box>
     </Stack>
   );
 }

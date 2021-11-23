@@ -7,7 +7,8 @@ import { CacheProvider, EmotionCache } from '@emotion/react';
 import {createEmotionCache, theme} from "../utils/index"
 import { EmptyLayout } from '@components/layout';
 import { AppPropsWithLayout } from '@models/common';
-import { Container } from '@mui/material';
+import '../components/slider/slider.scss';
+
 
 
 // Client-side cache, shared for the whole session of the user in the browser.
@@ -20,7 +21,7 @@ interface MyAppProps extends AppProps {
 
 export default function MyApp(props: AppPropsWithLayout) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
-  console.log(props)
+
   const Layout = Component.Layout ?? EmptyLayout;
   return (
     <CacheProvider value={emotionCache}>

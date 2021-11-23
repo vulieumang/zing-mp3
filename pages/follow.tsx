@@ -1,3 +1,4 @@
+import { MainLayout } from '@components/layout';
 import * as React from 'react';
 
 
@@ -9,3 +10,4 @@ export default function Follow () {
     </div>
   );
 }
+Follow.Layout = MainLayout

@@ -1,3 +1,4 @@
+import { MainLayout } from '@components/layout';
 import * as React from 'react';
 
 export interface IMusicNewProps {
@@ -10,3 +11,4 @@ export default function MusicNew (props: IMusicNewProps) {
     </div>
   );
 }
+MusicNew.Layout = MainLayout;

@@ -1,3 +1,4 @@
+import { MainLayout } from '@components/layout';
 import * as React from 'react';
 
 
@@ -8,3 +9,4 @@ export default function Radio () {
     </div>
   );
 }
+Radio.Layout = MainLayout;
